@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>守護霊暦｜名前と生年月日で見る守護霊診断</title>
-  <meta name="description" content="名前と生年月日、8つの質問から、あなたや気になる人を護る守護霊タイプを無料診断します。" />
+  <title>守護霊暦｜あなた専用 守護霊診断</title>
+  <meta name="description" content="名前と生年月日、15の質問から、あなたの魂の系統と今あなたを護る守護霊を無料診断します。" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -23,20 +23,20 @@
     <section id="top" class="section active">
       <div class="hero-card">
         <p class="eyebrow">完全無料・登録不要</p>
-        <h1>名前と生年月日で見る<br><span>守護霊診断</span></h1>
+        <h1>あなた専用<br><span>守護霊診断</span></h1>
         <p class="lead">
-          あなた、好きな人、推し、気になる相手。<br>
-          名前と生年月日、8つの質問から、その人を護る存在を読み解きます。
+          名前と生年月日、15の質問から、<br>
+          あなたの魂の系統と、今あなたを護る守護霊を読み解きます。
         </p>
 
         <div class="notice">
-          <strong>診断時間：</strong>約30秒<br>
-          <strong>質問数：</strong>8問<br>
-          <strong>遊び方：</strong>自分以外の名前でも診断できます
+          <strong>診断時間：</strong>約2分<br>
+          <strong>質問数：</strong>15問<br>
+          <strong>診断内容：</strong>魂の系統・守護霊・恋愛・金運・健康運
         </div>
 
         <button id="start" class="primary-btn">無料で鑑定する</button>
-        <p class="small">※本診断はエンタメ・占いコンテンツです。</p>
+        <p class="small">※本診断はエンタメ・占いコンテンツです。医療・投資・法律等の助言ではありません。</p>
       </div>
 
       <div class="feature-grid">
@@ -46,23 +46,23 @@
         </div>
         <div class="feature">
           <span>二</span>
-          <p>8問だけ直感で回答</p>
+          <p>15問を直感で回答</p>
         </div>
         <div class="feature">
           <span>三</span>
-          <p>守護霊タイプを開示</p>
+          <p>魂と守護霊を開示</p>
         </div>
       </div>
     </section>
 
     <section id="profile" class="section">
       <div class="form-card">
-        <p class="eyebrow">鑑定する相手</p>
-        <h2>誰の守護霊を見ますか？</h2>
+        <p class="eyebrow">鑑定情報</p>
+        <h2>あなた自身を鑑定します</h2>
 
         <label>
           名前・ニックネーム
-          <input id="personName" type="text" placeholder="例：自分、好きな人、推しの名前" maxlength="20" />
+          <input id="personName" type="text" placeholder="例：あなたの名前・ニックネーム" maxlength="20" />
         </label>
 
         <label>
@@ -74,7 +74,7 @@
         <button id="profileBack" class="ghost-btn">戻る</button>
 
         <p class="small">
-          ※芸能人・推し・友達などでも遊べます。個人情報の入力にはご注意ください。
+          ※本名でなくニックネームでも診断できます。入力内容は保存されません。
         </p>
       </div>
     </section>
@@ -82,7 +82,7 @@
     <section id="quiz" class="section">
       <div class="progress-wrap">
         <div class="progress-text">
-          <span id="questionCount">1 / 8</span>
+          <span id="questionCount">1 / 15</span>
           <span id="progressLabel">波長を確認中...</span>
         </div>
         <div class="progress-bar">
@@ -100,7 +100,7 @@
     <section id="loading" class="section">
       <div class="loading-card">
         <div class="moon-loader">☾</div>
-        <h2><span id="loadingName">その人</span>の守護霊を照合しています…</h2>
+        <h2><span id="loadingName">あなた</span>の守護霊を照合しています…</h2>
         <p id="loadingText">名前と生年月日の波長を読み取っています</p>
       </div>
     </section>
@@ -108,7 +108,8 @@
     <section id="result" class="section">
       <div class="result-card">
         <p class="eyebrow">診断結果</p>
-        <h2><span id="resultPersonName"></span>さんの守護霊は<br><span id="resultName"></span></h2>
+        <h2><span id="resultPersonName"></span>さんの診断結果<br><span id="resultComboName"></span></h2>
+        <p id="resultNameSub" class="result-sub-name"></p>
         <p id="resultCatch" class="result-catch"></p>
 
         <div class="result-image-wrap">
@@ -128,8 +129,8 @@
 
         <p class="soul-description">
           魂の系統とは、名前と生年月日から読み取った生まれ持つ本質です。
-          守護霊タイプが「今その人を護っている存在」だとすると、
-          魂の系統は「その人の奥にある性質」を表します。
+          守護霊タイプが「今あなたを護っている存在」だとすると、
+          魂の系統は「あなたの奥にある性質」を表します。
         </p>
 
         <div class="result-box">
@@ -142,10 +143,25 @@
           <p id="resultLove"></p>
         </div>
 
+        <div class="result-box soul-mix-box">
+          <h3>魂の系統との組み合わせ</h3>
+          <p id="resultSoulMix"></p>
+        </div>
+
+        <div class="result-box">
+          <h3>金運</h3>
+          <p id="resultMoney"></p>
+        </div>
+
+        <div class="result-box">
+          <h3>健康運</h3>
+          <p id="resultHealth"></p>
+        </div>
+
         <div class="result-box locked">
           <h3>詳細鑑定</h3>
           <p>
-            この人と相性が悪い相手、近づくと運気が下がる人、
+            あなたと相性が悪い相手、近づくと運気が下がる人、
             守護霊が強く反応する恋愛パターンはLINEで無料公開中です。
           </p>
           <a id="lineButton" class="line-btn" href="#" target="_blank" rel="noopener">LINEで詳細を受け取る</a>
