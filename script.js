@@ -1,4 +1,4 @@
-const LINE_URL = "https://lin.ee/ここにあなたのLINEリンク"; // ← 公式LINEのURLに変更
+const LINE_URL = "https://lin.ee/uHbHbVc"; // ← 公式LINEのURLに変更
 
 const types = {
   fox: {
