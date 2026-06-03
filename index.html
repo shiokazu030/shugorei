@@ -3,9 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>守護霊暦｜あなた専用 守護霊診断</title>
-  <meta name="description" content="名前と生年月日、15の質問から、あなたの魂の系統と今あなたを護る守護霊を無料診断します。" />
+  <title>守護霊暦｜あなた専用 守護霊診断｜診断サイト制作サンプル</title>
+  <meta name="description" content="名前と生年月日、15の質問から魂の系統と守護霊を診断。LINEやnoteへ自然に誘導できる診断サイト制作サンプルです。" />
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .sample-banner {
+      max-width: 980px;
+      margin: 18px auto 0;
+      padding: 14px 16px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 18px;
+      background: rgba(255,255,255,.08);
+      color: inherit;
+      backdrop-filter: blur(10px);
+      line-height: 1.75;
+      font-size: 13px;
+    }
+    .sample-banner strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+      letter-spacing: .03em;
+    }
+    .sample-note-box {
+      margin-top: 18px;
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.22);
+      background: rgba(255,255,255,.08);
+      line-height: 1.75;
+    }
+    .sample-note-box h3 {
+      margin-top: 0;
+    }
+    .note-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 12px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      background: #fff;
+      color: #3b2d4f;
+    }
+    @media (max-width: 720px) {
+      .sample-banner {
+        margin: 14px 14px 0;
+      }
+      .note-btn {
+        width: 100%;
+      }
+    }
+  </style>
+
 </head>
 <body>
   <div class="bg-orb orb-1"></div>
@@ -19,10 +72,15 @@
     <a href="#start" class="header-link">無料診断</a>
   </header>
 
+  <div class="sample-banner">
+    <strong>このページは診断サイト制作のサンプルです</strong>
+    占い・スピリチュアル系アカウントで、診断結果からLINE登録・note・個別鑑定ページへ自然につなげる「診断型LP」の見本として公開しています。
+  </div>
+
   <main>
     <section id="top" class="section active">
       <div class="hero-card">
-        <p class="eyebrow">完全無料・登録不要</p>
+        <p class="eyebrow">診断サイト制作サンプル・完全無料・登録不要</p>
         <h1>あなた専用<br><span>守護霊診断</span></h1>
         <p class="lead">
           名前と生年月日、15の質問から、<br>
@@ -32,7 +90,8 @@
         <div class="notice">
           <strong>診断時間：</strong>約2分<br>
           <strong>質問数：</strong>15問<br>
-          <strong>診断内容：</strong>魂の系統・守護霊・恋愛・金運・健康運
+          <strong>診断内容：</strong>魂の系統・守護霊・恋愛・金運・健康運<br>
+          <strong>導線例：</strong>LINE登録・note・個別鑑定ページ
         </div>
 
         <button id="start" class="primary-btn">無料で鑑定する</button>
@@ -159,12 +218,21 @@
         </div>
 
         <div class="result-box locked">
-          <h3>詳細鑑定</h3>
+          <h3>詳細鑑定への導線サンプル</h3>
           <p>
-            あなたと相性が悪い相手、近づくと運気が下がる人、
-            守護霊が強く反応する恋愛パターンはLINEで無料公開中です。
+            診断結果だけでは伝えきれなかった「相性が合いやすい相手」「運気が乱れやすい時期」
+            「守護霊が強く反応する恋愛パターン」などを、LINEや個別鑑定ページへ自然に誘導できます。
           </p>
           <a id="lineButton" class="line-btn" href="#" target="_blank" rel="noopener">LINEで詳細を受け取る</a>
+        </div>
+
+        <div class="result-box sample-note-box">
+          <h3>note誘導のサンプル</h3>
+          <p>
+            守護霊タイプ別の詳しい取扱説明書、開運アクション、恋愛傾向の深掘りなどをnoteにまとめておくことで、
+            診断結果から自然に有料記事・無料記事へつなげることができます。
+          </p>
+          <a id="noteButton" class="note-btn" href="#" target="_blank" rel="noopener">noteで詳しい解説を見る</a>
         </div>
 
         <button id="shareButton" class="share-btn">Xで結果をシェアする</button>
@@ -174,7 +242,7 @@
   </main>
 
   <footer>
-    <p>© 守護霊暦</p>
+    <p>© 守護霊暦｜診断サイト制作サンプル</p>
   </footer>
 
   <script src="script.js"></script>
